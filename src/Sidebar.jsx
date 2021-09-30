@@ -41,7 +41,7 @@ export default function Sidebar() {
            
                 </li>
                 <li className="menu-item-has-children dropdown">
-                  <a href="#" className="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i className="menu-icon fa fa-th" />Forms</a>
+                  <NavLink to="notification" className="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i className="menu-icon fa fa-th" />Notification</NavLink>
                   <ul className="sub-menu children dropdown-menu">
                     <li><i className="menu-icon fa fa-th" /><a href="forms-basic.html">Basic Form</a></li>
                     <li><i className="menu-icon fa fa-th" /><a href="forms-advanced.html">Advanced Form</a></li>

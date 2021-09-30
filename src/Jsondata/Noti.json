@@ -1,0 +1,31 @@
+[
+  {
+    "imgsrc1": "images/users/user1.jpg",
+    "heading": "John Doe reacted to your post",
+    "desc": "As designers attempting to creating functional work, oftentimes we are required to make our designs look as finished as possible",
+    "time": "10 mins ago",
+    "imgsrcr1":"images/features/random1.jpg"
+  },
+  {
+    "imgsrc1": "images/users/user2.jpg",
+    "heading": "Tom Uncle reacted to your post",
+    "desc": "As designers attempting to creating functional work, oftentimes we are required to make our designs look as finished as possible.",
+    "time": "20 mins ago",
+    "imgsrcr1":"images/features/random2.jpg"
+  },
+  {
+    "imgsrc1": "images/users/user3.jpg",
+    "heading": "James Bond reacted to your post",
+    "desc": "As designers attempting to creating functional work, oftentimes we are required to make our designs look as finished as possible.",
+    "time": "05 mins ago",
+    "imgsrcr1":"images/features/random3.jpg"
+  },
+  {
+    "imgsrc1": "images/users/user4.jpg",
+    "heading": "Van Damm reacted to your post",
+    "desc": "As designers attempting to creating functional work, oftentimes we are required to make our designs look as finished as possible.",
+    "time": "30 mins ago",
+    "imgsrcr1":"images/features/random4.jpg"
+  }
+
+]

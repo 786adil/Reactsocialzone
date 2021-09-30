@@ -2,6 +2,7 @@ import { NavLink } from 'react-router-dom';
 import './Style/Posting.css';
 import fire from "./fire";
 import React, { useState } from "react";
+import Post from './Jsondata/Post.json';
 
 
 export default function Posting() {
@@ -39,11 +40,8 @@ export default function Posting() {
            
                 </li>
                     <li className="menu-item-has-children dropdown">
-                      <a href="#" className="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i className="menu-icon fa fa-table" />Tables</a>
-                      <ul className="sub-menu children dropdown-menu">
-                        <li><i className="fa fa-table" /><a href="tables-basic.html">Basic Table</a></li>
-                        <li><i className="fa fa-table" /><a href="tables-data.html">Data Table</a></li>
-                      </ul>
+                    <NavLink to="notification" className="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i className="menu-icon fa fa-th" />Notification</NavLink>
+              
                     </li>
                     <li className="menu-item-has-children dropdown">
                       <a href="#" className="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i className="menu-icon fa fa-th" />Forms</a>
@@ -201,8 +199,24 @@ export default function Posting() {
       <div className="container">
       <div className="col-lg-8">
         <div className="panel profile-cover">
-          <div className="profile-cover__img">
-            <img src="https://www.pikpng.com/pngl/m/286-2863438_edit-profile-icon-free-download-png-edit-profile.png" alt="" />
+          <div className="profile-cover__img" >
+        
+
+          {
+                
+                Post.map(Post =>{
+                  return(
+                    <>
+                    <img src={Post.imgsrc}></img>
+                    </>
+                  )
+                  
+                }
+                
+                )
+                
+          }   
+                      
             <h3 className="h3">Henry Foster</h3>
           </div>
           <div className="profile-cover__action bg--img" data-overlay="0.3">
@@ -258,10 +272,20 @@ export default function Posting() {
                   <a href="#">John Doe</a> Posted the question: <a href="#">How can I change my annual reports for the better effect?</a>
                 </div>
                 <div className="activity__list__body entry-content">
-                  <p>
-                    <strong>Lorem ipsum dolor sit amet</strong>, consectetur adipisicing elit. Voluptatibus ab a nostrum repudiandae dolorem ut quaerat veniam asperiores, rerum voluptatem magni dolores corporis!
-                    <em>Molestiae commodi nesciunt a, repudiandae repellendus ea.</em>
-                  </p>
+                {
+                
+                Post.map(Post =>{
+                  return(
+                    <>
+                    <p>{Post.desc}</p>
+                    </>
+                  )
+                  
+                }
+                
+                )
+                
+          }
                 </div>
                 <div className="activity__list__footer">
                   <a href="#"> <i className="fa fa-thumbs-up" />123</a>
@@ -277,10 +301,20 @@ export default function Posting() {
                 </div>
                 <div className="activity__list__body entry-content">
                   <blockquote>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus ab a nostrum repudiandae dolorem ut quaerat veniam asperiores, rerum voluptatem magni dolores corporis! Molestiae commodi nesciunt a,
-                      repudiandae repellendus ea.
-                    </p>
+                  {
+                
+                Post.map(Post =>{
+                  return(
+                    <>
+                    <p>{Post.desc}</p>
+                    </>
+                  )
+                  
+                }
+                
+                )
+                
+          }
                   </blockquote>
                 </div>
                 <div className="activity__list__footer">
@@ -293,22 +327,29 @@ export default function Posting() {
                 <i className="activity__list__icon fa fa-image" />
                 <div className="activity__list__header">
                   <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="" />
-                  <a href="#">John Doe</a> Uploaded 4 Image: <a href="#">Office Working Time</a>
+                  <a href="#">John Doe</a> Uploaded 1 Image: <a href="#">Office Working Time</a>
                 </div>
                 <div className="activity__list__body entry-content">
-                  <ul className="gallery">
+                <ul className="gallery">
+                  
                     <li>
-                      <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="" />
+                      {
+           Post.map(Post =>{
+            return(
+              <>
+              <img src={Post.imgsrc}></img>
+              </>
+            )
+            
+          }
+          
+          )
+
+
+                      }
                     </li>
-                    <li>
-                      <img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="" />
-                    </li>
-                    <li>
-                      <img src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="" />
-                    </li>
-                    <li>
-                      <img src="https://bootdey.com/img/Content/avatar/avatar4.png" alt="" />
-                    </li>
+
+
                   </ul>
                 </div>
                 <div className="activity__list__footer">
@@ -325,10 +366,20 @@ export default function Posting() {
                 </div>
                 <div className="activity__list__body entry-content">
                   <blockquote>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus ab a nostrum repudiandae dolorem ut quaerat veniam asperiores, rerum voluptatem magni dolores corporis! Molestiae commodi nesciunt a,
-                      repudiandae repellendus ea.
-                    </p>
+                  {
+                
+                Post.map(Post =>{
+                  return(
+                    <>
+                    <p>{Post.desc}</p>
+                    </>
+                  )
+                  
+                }
+                
+                )
+                
+          }
                   </blockquote>
                 </div>
                 <div className="activity__list__footer">

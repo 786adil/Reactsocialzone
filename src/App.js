@@ -12,6 +12,8 @@ import Cards from './Cards';
 import Posting from './Posting';
 import Basket from './Basket';
 import Linking from './Linking';
+import Notification from './Notification';
+
 
 
 class App extends Component {
@@ -43,24 +45,18 @@ componentDidMount() {
       <div className="App">
         
         <BrowserRouter>
-        
-  
-    
-      
+
     <Switch>
-      
         <Route exact path="/" component={Main} />
-        <Route path="/signup" component={Signup} />
+        <Route path="/signup" component={Signup} /> 
         <Route path="/welcome" component={Home} />  
         <Route path="/sidebar" component={Sidebar} />  
         <Route path="/linking" component={Linking} /> 
+        <Route path="/notification" component={Notification} /> 
         {this.state.user ? (<Posting />)  : (<Login />)}
     
 
       </Switch>
-  
-      
-    
   </BrowserRouter>
 
   </div>

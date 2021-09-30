@@ -12,17 +12,17 @@ const Card = (props) => {
             <div className="col-sm-4 py-3 py-sm-0">
               <div className="card">
 
-                  <img class="card-img-top" src={props.imgsrc} alt={props.imgsrc} />
+              
 
                   <div class="card-body">
                       
-
-                  <p class="card-title font-weight-bold">{props.course}</p>
+                  <img class="card-img-top" src={props.imgsrc} alt={props.imgsrc} height="150px" />
+                  <p class="card-title font-weight-bold">  {props.desc}</p>
                       <p class="card-title font-weight-bold">{props.title}</p>
-                      <p class="card-title font-weight-bold"> Rs {props.price}/=</p>
+                     
                       
 
-                      <navlink to="" class="btn btn-primary">Add to cart</navlink>
+                      <navlink to="" class="btn btn-primary">Click For Login </navlink>
                   </div>
 
               </div>
@@ -31,17 +31,17 @@ const Card = (props) => {
           <div className="col-sm-4 py-3 py-sm-0">
               <div className="card">
 
-                  <img class="card-img-top" src={props.imgsrc} alt={props.imgsrc} />
+                  
 
                   <div class="card-body">
                       
-
-                  <p class="card-title font-weight-bold">{props.course}</p>
+                  <img class="card-img-top" src={props.imgsrc} alt={props.imgsrc} height="150px"/>
+                  <p class="card-title font-weight-bold">  {props.desc}</p>
                       <p class="card-title font-weight-bold">{props.title}</p>
-                      <p class="card-title font-weight-bold"> Rs {props.price}/=</p>
+                   
                       
 
-                      <navlink to="" class="btn btn-primary">Add to cart</navlink>
+                      <navlink to="" class="btn btn-primary">Click For Login </navlink>
                   </div>
 
               </div>
@@ -51,17 +51,17 @@ const Card = (props) => {
           <div className="col-sm-4 py-3 py-sm-0">
               <div className="card">
 
-                  <img class="card-img-top" src={props.imgsrc} alt={props.imgsrc} />
+                  
 
                   <div class="card-body">
                       
-
-                      <p class="card-title font-weight-bold">{props.course}</p>
+                  <img class="card-img-top" src={props.imgsrc} alt={props.imgsrc} height="150px" />
+                  <p class="card-title font-weight-bold">  {props.desc}</p>
                       <p class="card-title font-weight-bold">{props.title}</p>
-                      <p class="card-title font-weight-bold"> Rs {props.price}/=</p>
+                     
                       
 
-                      <navlink to="" class="btn btn-primary">Add to cart</navlink>
+                      <navlink to="" class="btn btn-primary">Click For Login </navlink>
                   </div>
 
               </div>

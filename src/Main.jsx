@@ -6,7 +6,7 @@ import Signup from './Signup';
 
 function Main() {
   return (
-    <div className="App">
+    <body>
  <div id="preloader">
           <div className="jumper">
             <div />
@@ -378,7 +378,7 @@ function Main() {
             </div>
           </div>
         </footer>
-    </div>
+</body>
   );
 }
 

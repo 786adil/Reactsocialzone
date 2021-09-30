@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom';
 import './Style/Sidebar.css';
 import fire from "./fire";
 import React, { useState } from "react";
-import Sdata from './Sdata';
+import Linkjson from './Jsondata/Link.json';
 import Cards from './Cards';
 
 
@@ -43,11 +43,8 @@ export default function Linking() {
            
                 </li>
                 <li className="menu-item-has-children dropdown">
-                  <a href="#" className="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i className="menu-icon fa fa-table" />Tables</a>
-                  <ul className="sub-menu children dropdown-menu">
-                    <li><i className="fa fa-table" /><a href="tables-basic.html">Basic Table</a></li>
-                    <li><i className="fa fa-table" /><a href="tables-data.html">Data Table</a></li>
-                  </ul>
+                <NavLink to="notification" className="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i className="menu-icon fa fa-th" />Notification</NavLink>
+                
                 </li>
                 <li className="menu-item-has-children dropdown">
                   <a href="#" className="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i className="menu-icon fa fa-th" />Forms</a>
@@ -199,7 +196,7 @@ export default function Linking() {
         
           {/* /.site-footer */}
         </div>
-        </body>
+        
       <div className="row">
         <div className="my-10">
           <h1 className="text-center"></h1>
@@ -211,12 +208,12 @@ export default function Linking() {
               <div className="row gy-4">
 
                 {
-                  Sdata.map((val, ind) => {
+                  Linkjson.map((val, ind) => {
                     return <Cards key={ind}
                       imgsrc ={val.imgsrc}
                       title={val.title}
-                      price={val.price}
-                      course={val.course}
+                      desc={val.desc}
+                      
 
                     />
 
@@ -230,7 +227,7 @@ export default function Linking() {
           </div>
         </div>
       </div>
-
+</body>
     </>
   )
 
