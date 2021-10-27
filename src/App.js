@@ -13,7 +13,7 @@ import Posting from './Posting';
 import Basket from './Basket';
 import Linking from './Linking';
 import Notification from './Notification';
-
+import { connect } from 'react-redux';
 
 
 class App extends Component {
@@ -25,6 +25,7 @@ class App extends Component {
     }
   }
 componentDidMount() {
+  console.log(this.props,"post")
     this.authListener();
   }
   authListener() {
@@ -64,5 +65,9 @@ componentDidMount() {
   );
 }
 }
-
-export default App;
+const mapStateToProps = (state) => {
+  return {
+    post: state.PostReducer
+  };
+}
+export default connect(mapStateToProps)(App);

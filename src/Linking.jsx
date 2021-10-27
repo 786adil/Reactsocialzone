@@ -1,9 +1,11 @@
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import './Style/Sidebar.css';
 import fire from "./fire";
 import React, { useState } from "react";
 import Linkjson from './Jsondata/Link.json';
 import Cards from './Cards';
+import { connect } from 'react-redux';
+import { setPost, addPost } from './action/linktAction'
 
 
 export default function Linking() {
@@ -19,6 +21,13 @@ export default function Linking() {
         alert("No user exist | ",error);
       })
     }
+    useEffect(() => {
+      setPost(Link);
+    }, [])
+  
+    useEffect(() => {
+      console.log(props.link, "props.link")
+    }, [props.link])
   
     const Logout = ()=>{
       fire.auth().signOut();
@@ -208,7 +217,7 @@ export default function Linking() {
               <div className="row gy-4">
 
                 {
-                  Linkjson.map((val, ind) => {
+                  props.link.map((val, ind) => {
                     return <Cards key={ind}
                       imgsrc ={val.imgsrc}
                       title={val.title}
@@ -230,6 +239,15 @@ export default function Linking() {
 </body>
     </>
   )
+  
+
 
 };
 
+const mapStateToProps = (state) => {
+  return {
+    link: state.LinkReducer.link
+  };
+}
+
+export default connect(mapStateToProps)(Linking)
